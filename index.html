@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amr Ayyad — Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/your-kit-id.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <h1 class="logo">Amr<span>Ayyad</span></h1>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+  </header>
+
+  <section id="hero">
+    <div class="hero-content">
+      <h2>Hi, I'm <span>Amr Ayyad</span></h2>
+      <p>BI Specialist • Data Analyst • Power BI & SQL Expert</p>
+      <div class="hero-buttons">
+        <a href="#projects" class="cta-btn">View My Work</a>
+        <a href="AmrAyyad_CV.pdf" download class="cv-btn">Download CV</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="card fade-in">
+    <h2>About Me</h2>
+    <p>
+      I’m a Business Intelligence Specialist with a passion for transforming complex data into actionable insights.
+      Skilled in Power BI, SQL, and data visualization — and known for designing interactive dashboards, 
+      streamlining workflows, and supporting data-driven decision-making.
+    </p>
+  </section>
+
+  <section id="skills" class="card fade-in">
+    <h2>Core Skills</h2>
+    <div class="skills-grid">
+      <div class="skill">Power BI & DAX</div>
+      <div class="skill">SQL & Database Design</div>
+      <div class="skill">Excel & Power Query</div>
+      <div class="skill">Data Modeling</div>
+      <div class="skill">Data Visualization</div>
+      <div class="skill">Business Analysis</div>
+    </div>
+  </section>
+
+  <section id="projects" class="card fade-in">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+      <div class="project">
+        <h3>Sales Analytics Dashboard</h3>
+        <p>Interactive Power BI dashboard tracking KPIs, revenue, and trends.</p>
+      </div>
+      <div class="project">
+        <h3>Data Quality Audit</h3>
+        <p>SQL-based audit system for ensuring data accuracy and integrity.</p>
+      </div>
+      <div class="project">
+        <h3>HR Insights Platform</h3>
+        <p>Visualization platform for workforce analytics and attrition trends.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="card fade-in">
+    <h2>Contact Me</h2>
+    <p>Let’s connect and build something impactful together.</p>
+    <div class="contact-icons">
+      <a href="mailto:amr.ayyad@email.com" class="icon" title="Email"><i class="fas fa-envelope"></i></a>
+      <a href="https://linkedin.com/in/amrayyad" target="_blank" class="icon" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/amrayyad" target="_blank" class="icon" title="GitHub"><i class="fab fa-github"></i></a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Amr Ayyad — All rights reserved</p>
+  </footer>
+
+  <script>
+    // Fade-in animation on scroll
+    const faders = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver((entries, observer)=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){
+          entry.target.classList.add('show');
+          observer.unobserve(entry.target);
+        }
+      });
+    },{threshold: 0.1});
+    faders.forEach(f => observer.observe(f));
+
+    // Mobile hamburger toggle
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      hamburger.classList.toggle('active');
+    });
+  </script>
+</body>
+  </html>
+  
