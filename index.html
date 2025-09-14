@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amr Ayyad | Portfolio</title>
+  <style>
+    /* ===== Root Colors and Base ===== */
+    :root {
+      --bg: linear-gradient(135deg, #0d1117 0%, #022c22 40%, #004d61 70%, #0d1117 100%);
+      --card-bg: rgba(255, 255, 255, 0.05);
+      --text: #e6edf3;
+      --muted: #9ca3af;
+      --accent: #4dd0e1;
+      --accent2: #58a6ff;
+      --radius: 20px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3 {
+      color: var(--accent2);
+      margin-top: 0;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    a:hover { color: #7ee5f7; }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 60px 20px;
+    }
+
+    /* ===== Header ===== */
+    header {
+      text-align: center;
+      padding: 80px 20px 40px;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 0.2em;
+    }
+
+    header h2 {
+      font-weight: 400;
+      color: var(--muted);
+      margin-top: 0;
+      font-size: 1.3rem;
+    }
+
+    .socials img {
+      margin: 10px;
+      height: 32px;
+      transition: transform 0.2s;
+    }
+    .socials img:hover { transform: scale(1.1); }
+
+    /* ===== Card Layout ===== */
+    .card {
+      background: var(--card-bg);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: var(--radius);
+      padding: 40px;
+      margin-top: 50px;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    }
+
+    /* ===== About ===== */
+    .about p {
+      color: var(--muted);
+      font-size: 1.1rem;
+      margin: 0;
+    }
+
+    /* ===== Skills / Tools ===== */
+    .tools {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 30px;
+    }
+
+    .tools img {
+      height: 46px;
+      opacity: 0.85;
+      transition: transform 0.2s, opacity 0.2s;
+    }
+
+    .tools img:hover {
+      opacity: 1;
+      transform: translateY(-4px);
+    }
+
+    /* ===== Projects ===== */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
+    }
+
+    .project-card {
+      background: rgba(255,255,255,0.03);
+      border-radius: var(--radius);
+      padding: 25px;
+      border: 1px solid rgba(255,255,255,0.08);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    }
+
+    .project-card h4 {
+      margin-top: 0;
+      color: var(--accent2);
+    }
+
+    .project-card p {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    /* ===== GitHub ===== */
+    .github-stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 30px;
+    }
+
+    /* ===== Footer ===== */
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.9rem;
+      padding: 80px 0 30px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 2.2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Amr Ayyad</h1>
+    <h2>Training Specialist · Data Analyst · Python Developer</h2>
+
+    <div class="socials">
+      <a href="https://www.linkedin.com/in/amr-m-ayyad/" target="_blank">
+        <img src="https://img.shields.io/static/v1?message=LinkedIn&logo=linkedin&label=&color=0077B5&logoColor=white&style=flat" alt="LinkedIn" />
+      </a>
+      <a href="mailto:amro.m.ayyad@gmail.com" target="_blank">
+        <img src="https://img.shields.io/static/v1?message=Email&logo=gmail&label=&color=D14836&logoColor=white&style=flat" alt="Gmail" />
+      </a>
+      <a href="https://discordapp.com/users/meroiscool" target="_blank">
+        <img src="https://img.shields.io/static/v1?message=Discord&logo=discord&label=&color=7289DA&logoColor=white&style=flat" alt="Discord" />
+      </a>
+    </div>
+  </header>
+
+  <div class="container">
+
+    <section class="card about">
+      <h3>👨‍💼 About Me</h3>
+      <p>
+        I’m a multidisciplinary training specialist and data analyst passionate about building skills, 
+        automating workflows, and uncovering insights from data.  
+        I design and deliver learning programs, build analytical dashboards, and develop Python-based data tools.  
+        My experience spans corporate training, curriculum design, business intelligence, and applied statistics.
+      </p>
+    </section>
+
+    <section class="card">
+      <h3>🧠 Skills</h3>
+      <p class="muted">
+        Data analysis, Python development, business intelligence, SQL, Power BI, Excel modeling, statistics, 
+        curriculum design, instructional design, and training delivery.
+      </p>
+    </section>
+
+    <section class="card">
+      <h3>⚙️ Tools & Technologies</h3>
+      <div class="tools">
+        <img src="https://skillicons.dev/icons?i=py" alt="Python" />
+        <img src="https://skillicons.dev/icons?i=sql" alt="SQL" />
+        <img src="https://skillicons.dev/icons?i=powerbi" alt="Power BI" />
+        <img src="https://skillicons.dev/icons?i=excel" alt="Excel" />
+        <img src="https://skillicons.dev/icons?i=pandas" alt="Pandas" />
+        <img src="https://skillicons.dev/icons?i=numpy" alt="NumPy" />
+        <img src="https://skillicons.dev/icons?i=flask" alt="Flask" />
+        <img src="https://skillicons.dev/icons?i=docker" alt="Docker" />
+        <img src="https://skillicons.dev/icons?i=git" alt="Git" />
+        <img src="https://cdn.simpleicons.org/jupyter/FF6F00" alt="Jupyter" height="46"/>
+        <img src="https://cdn.simpleicons.org/visualstudiocode/007ACC" alt="VS Code" height="46"/>
+        <img src="https://cdn.simpleicons.org/canva/00C4CC" alt="Canva" height="46"/>
+        <img src="https://cdn.simpleicons.org/adobephotoshop/31A8FF" alt="Photoshop" height="46"/>
+      </div>
+    </section>
+
+    <section class="card">
+      <h3>📁 Featured Projects</h3>
+      <div class="projects-grid">
+        <div class="project-card">
+          <h4>Data Analysis Course</h4>
+          <p>Designed and developed a complete data analysis curriculum including Excel, SQL, and Power BI modules, combining theory and hands-on labs.</p>
+        </div>
+        <div class="project-card">
+          <h4>Automated Reporting System</h4>
+          <p>Built a Python-based reporting system integrating Power BI and SQL for automated data collection and visualization for business teams.</p>
+        </div>
+        <div class="project-card">
+          <h4>Training Platform Overhaul</h4>
+          <p>Led the redesign of a corporate training platform, introducing data-driven evaluation and personalized learning paths for 500+ learners.</p>
+        </div>
+      </div>
+    </section>
+
+  
+
+  </div>
+
+  <footer>
+    © 2025 Amr Ayyad — Made with 💙 and lots of ☕
+  </footer>
+
+</body>
+</html>
