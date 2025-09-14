@@ -1,266 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Amr Ayyad — Portfolio</title>
-  <meta name="description" content="Amr Ayyad — BI Specialist, Data Analyst, Python Developer & Instructor" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-  <!-- primary stylesheet (keeps full design) -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amr Ayyad | Portfolio</title>
   <link rel="stylesheet" href="style.css" />
-  <!-- CRITICAL OVERRIDES: ensure content is visible even if external css/js fail -->
-  <style>
-    /* Make reveal sections visible by default so page still works without script.js */
-    .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
-    /* Minimal fallback layout to avoid totally unstyled content while debugging */
-    body { margin:0; font-family: 'Poppins', sans-serif; background: linear-gradient(135deg,#071018,#06363a); color:#eef6f9; }
-    .container{max-width:1100px;margin:0 auto;padding:0 20px;}
-    header, nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0;}
-    .brand-link{color:inherit;font-weight:700;text-decoration:none}
-    .accent{color:#00c6ff}
-    .hero{padding:80px 0;text-align:center}
-    .btn{display:inline-block;padding:10px 18px;border-radius:999px;text-decoration:none;background:#00c6ff;color:#022;margin:8px}
-    /* ensure project cards show block boxes */
-    .project-card, .card {opacity:1 !important;}
-  </style>
+  <script defer src="script.js"></script>
 </head>
-<body>
-  <!-- NAV -->
-  <header class="site-header">
-    <nav class="nav container">
-      <div class="brand">
-        <a href="#home" class="brand-link">Amr<span class="accent">Ayyad</span></a>
+<body class="light">
+
+  <!-- NAVBAR -->
+  <nav>
+    <div class="logo">Amr Ayyad</div>
+    <ul>
+      <li><a class="nav-link active" href="#about">About</a></li>
+      <li><a class="nav-link" href="#projects">Projects</a></li>
+      <li><a class="nav-link" href="#skills">Skills</a></li>
+      <li><a class="nav-link" href="#contact">Contact</a></li>
+    </ul>
+    <button id="themeToggle">🌓</button>
+  </nav>
+
+  <!-- HERO / ABOUT -->
+  <section id="about" class="card hero">
+    <h1>Hi, I'm <span>Amr Ayyad</span></h1>
+    <p>A BI Specialist and Data Analyst passionate about transforming data into insights using SQL, Power BI, and Python. Skilled in dashboard design, data modeling, and visual storytelling.</p>
+    <a href="assets/resume.pdf" class="btn" download>Download Resume</a>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="card">
+    <h2>Featured Projects</h2>
+    <div class="projects-container">
+      <button class="carousel-btn left">&#10094;</button>
+      <div class="projects-carousel">
+        <div class="project-card">
+          <img src="assets/project1.png" alt="Project 1">
+          <h3>Sales Dashboard</h3>
+          <p>Power BI dashboard for real-time sales tracking and performance KPIs.</p>
+        </div>
+        <div class="project-card">
+          <img src="assets/project2.png" alt="Project 2">
+          <h3>Customer Insights</h3>
+          <p>Python + SQL pipeline generating customer segmentation and churn analysis.</p>
+        </div>
       </div>
-
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="#skills" class="nav-link">Skills</a></li>
-        <li><a href="#projects" class="nav-link">Projects</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
-      </ul>
-
-      <div class="controls">
-        <button id="themeToggle" class="icon-btn" aria-label="Toggle theme" title="Toggle dark / light">
-          <svg id="themeIcon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path></svg>
-        </button>
-
-        <button id="hamburger" class="hamburger" aria-label="Open menu" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-    </nav>
-
-    <!-- Mobile menu (slides down) -->
-    <div id="mobileMenu" class="mobile-menu" hidden>
-      <a href="#about" class="mobile-link">About</a>
-      <a href="#skills" class="mobile-link">Skills</a>
-      <a href="#projects" class="mobile-link">Projects</a>
-      <a href="#contact" class="mobile-link">Contact</a>
+      <button class="carousel-btn right">&#10095;</button>
     </div>
-  </header>
+  </section>
 
-  <!-- HERO -->
-  <main>
-    <section id="home" class="hero">
-      <div class="container hero-inner">
-        <h1 class="hero-title">Hi, I’m <span class="accent">Amr Ayyad</span></h1>
-        <p class="hero-sub">BI Specialist · Data Analyst · Power BI · SQL · Python</p>
-        <div class="hero-cta">
-          <a class="btn primary" href="#projects">View My Work</a>
-          <a class="btn outline" href="assets/resume.pdf" download>Download Resume</a>
-        </div>
+  <!-- SKILLS -->
+  <section id="skills" class="card">
+    <h2>Core Skills</h2>
+    <ul class="skills-grid">
+      <li>Power BI</li>
+      <li>SQL</li>
+      <li>Python</li>
+      <li>Data Modeling</li>
+      <li>Dashboard Design</li>
+      <li>ETL & Data Cleaning</li>
+    </ul>
+  </section>
 
-        <div class="hero-contact" style="margin-top:16px;">
-          <!-- contact icons (inline svgs) -->
-          <a class="contact-icon" href="mailto:amr.ayyad@email.com" title="Email" style="margin-right:10px;">
-            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M2 4a2 2 0 012-2h16a2 2 0 012 2v4l-10 6L2 8V4z"/><path d="M22 10v6a2 2 0 01-2 2H4a2 2 0 01-2-2v-6l10 6 10-6z"/></svg>
-          </a>
-          <a class="contact-icon" href="https://www.linkedin.com/in/amrayyad" target="_blank" rel="noopener" title="LinkedIn" style="margin-right:10px;">
-            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5C4.98 4.6 4.1 5.5 2.98 5.5s-2-.9-2-2 0-2 2-2 2 .9 2 2zM.5 8.98h4.98V24H.5zM10.5 8.98h4.78v2.05h.07c.67-1.27 2.3-2.61 4.74-2.61 5.07 0 6 3.34 6 7.68V24h-4.98v-7.01c0-1.67-.03-3.82-2.33-3.82-2.34 0-2.7 1.82-2.7 3.69V24H10.5V8.98z"/></svg>
-          </a>
-          <a class="contact-icon" href="https://github.com/amrayyad" target="_blank" rel="noopener" title="GitHub">
-            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.7.5.9 5.3.9 11.6c0 4.6 2.9 8.5 6.9 9.9.5.1.7-.2.7-.5v-1.8c-2.8.6-3.4-1.3-3.4-1.3-.4-1.1-1.1-1.4-1.1-1.4-.9-.6.1-.6.1-.6 1 .1 1.6 1 1.6 1 .9 1.6 2.4 1.1 3 .9.1-.6.4-1.1.7-1.4-2.2-.3-4.5-1.1-4.5-4.9 0-1.1.4-2.1 1.1-2.9-.1-.3-.5-1.5.1-3 0 0 .9-.3 3 1.1a10.3 10.3 0 012.8-.4c.9 0 1.8.1 2.8.4 2.1-1.4 3-1.1 3-1.1.6 1.5.2 2.7.1 3 0 .1.7 1.1 1.1 2.9 0 3.8-2.3 4.6-4.5 4.9.4.3.8 1 .8 2v3c0 .3.2.6.7.5 4-1.4 6.9-5.3 6.9-9.9C23 5.3 18.3.5 12 .5z"/></svg>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section id="about" class="card reveal">
-      <div class="container">
-        <h2>About</h2>
-        <p>
-          I’m a multidisciplinary Training & Business Intelligence specialist. I build interactive dashboards (Power BI),
-          write automation scripts in Python, design data courses, and help teams turn analytics into decisions.
-        </p>
-      </div>
-    </section>
-
-    <!-- SKILLS -->
-    <section id="skills" class="card reveal">
-      <div class="container">
-        <h2>Skills</h2>
-        <div class="skills-grid">
-          <div class="skill">Power BI & DAX</div>
-          <div class="skill">SQL & Data Modeling</div>
-          <div class="skill">Excel / Power Query</div>
-          <div class="skill">Python / pandas</div>
-          <div class="skill">Data Visualization</div>
-          <div class="skill">Instructional Design</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- PROJECTS -->
-    <section id="projects" class="card reveal">
-      <div class="container">
-        <h2>Projects</h2>
-        <div class="projects-grid">
-          <article class="project-card">
-            <div class="project-media" style="background-image:url('assets/project1.png')"></div>
-            <div class="project-body">
-              <h3>Interactive BI Dashboard</h3>
-              <p>Power BI dashboard showing sales KPIs, trends, and drill-through reports.</p>
-              <div class="project-tags"><span>Power BI</span><span>SQL</span></div>
-              <a class="project-link" href="#" target="_blank" rel="noopener">View project</a>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <div class="project-media" style="background-image:url('assets/project2.png')"></div>
-            <div class="project-body">
-              <h3>Python Automation Tool</h3>
-              <p>Automated ETL and reporting scripts to reduce manual reporting time.</p>
-              <div class="project-tags"><span>Python</span><span>pandas</span></div>
-              <a class="project-link" href="#" target="_blank" rel="noopener">View project</a>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <div class="project-media" style="background-image:url('assets/project3.png')"></div>
-            <div class="project-body">
-              <h3>Data Analysis Bootcamp</h3>
-              <p>End-to-end training program teaching Excel, SQL, and Power BI to analysts.</p>
-              <div class="project-tags"><span>Training</span><span>Curriculum</span></div>
-              <a class="project-link" href="#" target="_blank" rel="noopener">View project</a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="card reveal">
-      <div class="container contact-grid">
-        <div>
-          <h2>Contact</h2>
-          <p>If you’d like to collaborate or hire me, reach out — I typically respond within 48 hours.</p>
-          <p><strong>Email:</strong> <a href="mailto:amr.ayyad@email.com">amr.ayyad@email.com</a></p>
-          <div class="contact-icons" style="margin-top:12px;">
-            <a class="icon-btn" href="mailto:amr.ayyad@email.com" title="Email">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M2 4v16h20V4H2zm18 2-8 5-8-5h16z"/></svg>
-            </a>
-            <a class="icon-btn" href="https://www.linkedin.com/in/amrayyad" target="_blank" rel="noopener" title="LinkedIn">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.6 4.1 5.5 2.98 5.5s-2-.9-2-2 0-2 2-2 2 .9 2 2zM.5 8.98h4.98V24H.5zM10.5 8.98h4.78v2.05h.07c.67-1.27 2.3-2.61 4.74-2.61 5.07 0 6 3.34 6 7.68V24h-4.98v-7.01c0-1.67-.03-3.82-2.33-3.82-2.34 0-2.7 1.82-2.7 3.69V24H10.5V8.98z"/></svg>
-            </a>
-            <a class="icon-btn" href="https://github.com/amrayyad" target="_blank" rel="noopener" title="GitHub">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.9 5.3.9 11.6c0 4.6 2.9 8.5 6.9 9.9.5.1.7-.2.7-.5v-1.8c-2.8.6-3.4-1.3-3.4-1.3-.4-1.1-1.1-1.4-1.1-1.4-.9-.6.1-.6.1-.6 1 .1 1.6 1 1.6 1 .9 1.6 2.4 1.1 3 .9.1-.6.4-1.1.7-1.4-2.2-.3-4.5-1.1-4.5-4.9 0-1.1.4-2.1 1.1-2.9-.1-.3-.5-1.5.1-3 0 0 .9-.3 3 1.1a10.3 10.3 0 012.8-.4c.9 0 1.8.1 2.8.4 2.1-1.4 3-1.1 3-1.1.6 1.5.2 2.7.1 3 0 .1.7 1.1 1.1 2.9 0 3.8-2.3 4.6-4.5 4.9.4.3.8 1 .8 2v3c0 .3.2.6.7.5 4-1.4 6.9-5.3 6.9-9.9C23 5.3 18.3.5 12 .5z"/></svg>
-            </a>
-          </div>
-        </div>
-
-        <div class="contact-form-wrap">
-          <form id="contactForm" class="contact-form" onsubmit="return false">
-            <label><span class="label-text">Name</span>
-              <input name="name" type="text" placeholder="Your name" required>
-            </label>
-            <label><span class="label-text">Email</span>
-              <input name="email" type="email" placeholder="you@company.com" required>
-            </label>
-            <label><span class="label-text">Message</span>
-              <textarea name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
-            </label>
-            <div class="form-actions">
-              <button id="sendBtn" class="btn primary">Send Message</button>
-              <button type="button" id="clearBtn" class="btn outline">Clear</button>
-            </div>
-            <p id="formStatus" class="form-status" aria-live="polite"></p>
-          </form>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <small>© <span id="year">2025</span> Amr Ayyad — All rights reserved</small>
+  <!-- CONTACT -->
+  <section id="contact" class="card">
+    <h2>Contact Me</h2>
+    <div class="contact-icons">
+      <a href="mailto:youremail@example.com" target="_blank">📧</a>
+      <a href="https://www.linkedin.com/in/amrayyad" target="_blank">💼</a>
+      <a href="https://github.com/amrayyad" target="_blank">💻</a>
     </div>
-  </footer>
+  </section>
 
-  <!-- immediate fallback JS (ensures basic interaction even if script.js fails) -->
-  <script>
-    (function(){
-      // set year
-      const yearEl = document.getElementById('year');
-      if(yearEl) yearEl.textContent = new Date().getFullYear();
+  <footer>© 2025 Amr Ayyad</footer>
 
-      // mobile menu toggle (fallback)
-      const hamburger = document.getElementById('hamburger');
-      const mobileMenu = document.getElementById('mobileMenu');
-      if(hamburger && mobileMenu){
-        hamburger.addEventListener('click', function(){
-          const open = !mobileMenu.hidden;
-          mobileMenu.hidden = open;
-          hamburger.setAttribute('aria-expanded', String(!open));
-          hamburger.classList.toggle('is-active');
-        });
-        // close mobile when clicking mobile links
-        document.querySelectorAll('.mobile-link').forEach(a => a.addEventListener('click', () => {
-          mobileMenu.hidden = true;
-          hamburger.classList.remove('is-active');
-          hamburger.setAttribute('aria-expanded','false');
-        }));
-      }
-
-      // theme toggle fallback (stores preference)
-      const themeToggle = document.getElementById('themeToggle');
-      const root = document.documentElement;
-      if (localStorage.getItem('site-theme') === 'light') root.classList.add('light-mode');
-      if(themeToggle){
-        themeToggle.addEventListener('click', () => {
-          root.classList.toggle('light-mode');
-          localStorage.setItem('site-theme', root.classList.contains('light-mode') ? 'light' : 'dark');
-        });
-      }
-
-      // contact form fallback: open mailto
-      const contactForm = document.getElementById('contactForm');
-      const formStatus = document.getElementById('formStatus');
-      const sendBtn = document.getElementById('sendBtn');
-      const clearBtn = document.getElementById('clearBtn');
-
-      if(sendBtn && contactForm){
-        sendBtn.addEventListener('click', () => {
-          const fd = new FormData(contactForm);
-          const name = fd.get('name') || '';
-          const email = fd.get('email') || '';
-          const message = fd.get('message') || '';
-          if(!name || !email || !message){
-            formStatus.textContent = 'Please fill all fields.';
-            return;
-          }
-          const mailto = `mailto:amr.ayyad@email.com?subject=${encodeURIComponent('Portfolio contact from ' + name)}&body=${encodeURIComponent(message + '\n\nFrom: ' + name + ' <' + email + '>')}`;
-          window.location.href = mailto;
-          formStatus.textContent = 'Opening your email client...';
-        });
-      }
-      if(clearBtn && contactForm){
-        clearBtn.addEventListener('click', () => { contactForm.reset(); formStatus.textContent=''; });
-      }
-    })();
-  </script>
-
-  <!-- full-behavior file (if present) -->
-  <script src="script.js"></script>
 </body>
 </html>
