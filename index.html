@@ -5,12 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Amr Ayyad | Portfolio</title>
   <style>
-    /* ===== Global Styles ===== */
+    /* ===== Root Colors and Base ===== */
     :root {
-      --bg: #0d1117;
+      --bg: linear-gradient(135deg, #0d1117 0%, #022c22 40%, #004d61 70%, #0d1117 100%);
+      --card-bg: rgba(255, 255, 255, 0.05);
       --text: #e6edf3;
-      --accent: #58a6ff;
-      --muted: #8b949e;
+      --muted: #9ca3af;
+      --accent: #4dd0e1;
+      --accent2: #58a6ff;
+      --radius: 20px;
+    }
+
+    * {
+      box-sizing: border-box;
     }
 
     body {
@@ -23,7 +30,7 @@
     }
 
     h1, h2, h3 {
-      color: var(--accent);
+      color: var(--accent2);
       margin-top: 0;
     }
 
@@ -32,22 +39,22 @@
       text-decoration: none;
       transition: color 0.2s;
     }
-    a:hover { color: #79c0ff; }
+    a:hover { color: #7ee5f7; }
 
     .container {
-      max-width: 900px;
+      max-width: 1000px;
       margin: 0 auto;
-      padding: 40px 20px 80px;
+      padding: 60px 20px;
     }
 
-    /* ===== Header / Hero ===== */
+    /* ===== Header ===== */
     header {
       text-align: center;
       padding: 80px 20px 40px;
     }
 
     header h1 {
-      font-size: 2.5rem;
+      font-size: 2.8rem;
       margin-bottom: 0.2em;
     }
 
@@ -55,58 +62,86 @@
       font-weight: 400;
       color: var(--muted);
       margin-top: 0;
+      font-size: 1.3rem;
     }
 
     .socials img {
-      margin: 8px;
-      height: 28px;
+      margin: 10px;
+      height: 32px;
       transition: transform 0.2s;
     }
     .socials img:hover { transform: scale(1.1); }
 
-    /* ===== Sections ===== */
-    section {
-      margin-top: 80px;
+    /* ===== Card Layout ===== */
+    .card {
+      background: var(--card-bg);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: var(--radius);
+      padding: 40px;
+      margin-top: 50px;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
     }
 
-    .about {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      align-items: center;
-    }
-
-    .about img {
-      flex: 0 0 150px;
-      border-radius: 12px;
-    }
-
+    /* ===== About ===== */
     .about p {
-      flex: 1;
       color: var(--muted);
-      font-size: 1.05rem;
+      font-size: 1.1rem;
+      margin: 0;
     }
 
+    /* ===== Skills / Tools ===== */
     .tools {
       display: flex;
       flex-wrap: wrap;
-      gap: 15px;
+      gap: 20px;
       justify-content: center;
-      margin-top: 25px;
+      margin-top: 30px;
     }
 
     .tools img {
-      height: 42px;
-      opacity: 0.9;
+      height: 46px;
+      opacity: 0.85;
       transition: transform 0.2s, opacity 0.2s;
     }
 
     .tools img:hover {
       opacity: 1;
-      transform: translateY(-3px);
+      transform: translateY(-4px);
     }
 
-    /* ===== GitHub Section ===== */
+    /* ===== Projects ===== */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
+    }
+
+    .project-card {
+      background: rgba(255,255,255,0.03);
+      border-radius: var(--radius);
+      padding: 25px;
+      border: 1px solid rgba(255,255,255,0.08);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    }
+
+    .project-card h4 {
+      margin-top: 0;
+      color: var(--accent2);
+    }
+
+    .project-card p {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    /* ===== GitHub ===== */
     .github-stats {
       display: flex;
       flex-wrap: wrap;
@@ -120,13 +155,11 @@
       text-align: center;
       color: var(--muted);
       font-size: 0.9rem;
-      padding-top: 100px;
+      padding: 80px 0 30px;
     }
 
     @media (max-width: 600px) {
-      header h1 { font-size: 2rem; }
-      .about { flex-direction: column; text-align: center; }
-      .about img { margin-bottom: 15px; }
+      header h1 { font-size: 2.2rem; }
     }
   </style>
 </head>
@@ -151,29 +184,58 @@
 
   <div class="container">
 
-    <section class="about">
-      <img src="https://camo.githubusercontent.com/62da68eb62b1e5f175f7d1f0191dd89a653d7908feb22d37d4a0ab07365d6791/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f4d3967624264396e6244724f5475314d71782f67697068792e676966" alt="Amr coding gif" />
+    <section class="card about">
+      <h3>👨‍💼 About Me</h3>
       <p>
-        I'm passionate about building skills, solving problems with data, and helping people grow.  
-        I work as a training specialist, freelance statistical analyst, and Python developer.  
-        I love exploring data science, automation, and analytics tools — and sharing that knowledge with others.
+        I’m a multidisciplinary training specialist and data analyst passionate about building skills, 
+        automating workflows, and uncovering insights from data.  
+        I design and deliver learning programs, build analytical dashboards, and develop Python-based data tools.  
+        My experience spans corporate training, curriculum design, business intelligence, and applied statistics.
       </p>
     </section>
 
-    <section>
-      <h3>🛠 Tech & Tools</h3>
+    <section class="card">
+      <h3>🧠 Skills</h3>
+      <p class="muted">
+        Data analysis, Python development, business intelligence, SQL, Power BI, Excel modeling, statistics, 
+        curriculum design, instructional design, and training delivery.
+      </p>
+    </section>
+
+    <section class="card">
+      <h3>⚙️ Tools & Technologies</h3>
       <div class="tools">
         <img src="https://skillicons.dev/icons?i=py" alt="Python" />
-        <img src="https://skillicons.dev/icons?i=r" alt="R" />
-        <img src="https://skillicons.dev/icons?i=cpp" alt="C++" />
-        <img src="https://cdn.simpleicons.org/anaconda/44A833" alt="Anaconda" />
+        <img src="https://skillicons.dev/icons?i=sql" alt="SQL" />
+        <img src="https://skillicons.dev/icons?i=powerbi" alt="Power BI" />
+        <img src="https://skillicons.dev/icons?i=excel" alt="Excel" />
         <img src="https://skillicons.dev/icons?i=pandas" alt="Pandas" />
         <img src="https://skillicons.dev/icons?i=numpy" alt="NumPy" />
-        <img src="https://skillicons.dev/icons?i=mysql" alt="MySQL" />
+        <img src="https://skillicons.dev/icons?i=flask" alt="Flask" />
         <img src="https://skillicons.dev/icons?i=docker" alt="Docker" />
         <img src="https://skillicons.dev/icons?i=git" alt="Git" />
-        <img src="https://skillicons.dev/icons?i=flask" alt="Flask" />
-        <img src="https://skillicons.dev/icons?i=tensorflow" alt="TensorFlow" />
+        <img src="https://cdn.simpleicons.org/jupyter/FF6F00" alt="Jupyter" height="46"/>
+        <img src="https://cdn.simpleicons.org/visualstudiocode/007ACC" alt="VS Code" height="46"/>
+        <img src="https://cdn.simpleicons.org/canva/00C4CC" alt="Canva" height="46"/>
+        <img src="https://cdn.simpleicons.org/adobephotoshop/31A8FF" alt="Photoshop" height="46"/>
+      </div>
+    </section>
+
+    <section class="card">
+      <h3>📁 Featured Projects</h3>
+      <div class="projects-grid">
+        <div class="project-card">
+          <h4>Data Analysis Course</h4>
+          <p>Designed and developed a complete data analysis curriculum including Excel, SQL, and Power BI modules, combining theory and hands-on labs.</p>
+        </div>
+        <div class="project-card">
+          <h4>Automated Reporting System</h4>
+          <p>Built a Python-based reporting system integrating Power BI and SQL for automated data collection and visualization for business teams.</p>
+        </div>
+        <div class="project-card">
+          <h4>Training Platform Overhaul</h4>
+          <p>Led the redesign of a corporate training platform, introducing data-driven evaluation and personalized learning paths for 500+ learners.</p>
+        </div>
       </div>
     </section>
 
