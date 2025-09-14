@@ -1,0 +1,121 @@
+import { useState, useEffect } from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
+import { Github, Linkedin, Mail, Moon, Sun } from "lucide-react";
+
+export default function Portfolio() {
+  const [dark, setDark] = useState(true);
+  useEffect(() => {
+    document.documentElement.classList.toggle("dark", dark);
+  }, [dark]);
+
+  return (
+    <div className={`min-h-screen ${dark ? "bg-gradient-to-br from-slate-950 via-cyan-900 to-emerald-800" : "bg-gradient-to-br from-emerald-100 via-cyan-100 to-white"} transition-colors`}>
+
+      {/* SEO Meta */}
+      <head>
+        <title>Amr Ayyad - Portfolio</title>
+        <meta name="description" content="Portfolio of Amr Ayyad — BI Specialist, Data Analyst, Python Developer & Instructor."/>
+        <meta property="og:title" content="Amr Ayyad - Portfolio" />
+        <meta property="og:description" content="BI Specialist, Data Analyst, Python Developer & Instructor" />
+        <meta property="og:type" content="website" />
+      </head>
+
+      {/* Navbar */}
+      <nav className="fixed top-0 left-0 right-0 bg-black/30 backdrop-blur-md z-50 flex justify-between items-center px-10 py-4 text-sm uppercase tracking-wider">
+        <div className="flex gap-8">
+          {['home','about','skills','projects','contact'].map((s)=>(
+            <a key={s} href={`#${s}`} className="hover:text-cyan-300 transition">{s}</a>
+          ))}
+        </div>
+        <button onClick={()=>setDark(!dark)} className="p-2 rounded-full bg-black/30 hover:bg-black/50 transition">
+          {dark ? <Sun size={18}/> : <Moon size={18}/>}
+        </button>
+      </nav>
+
+      {/* Hero */}
+      <section id="home" className="flex flex-col items-center justify-center text-center h-screen px-4">
+        <motion.h1 initial={{opacity:0,y:20}} animate={{opacity:1,y:0}} transition={{duration:0.8}} className="text-6xl font-extrabold mb-4">
+          Amr Ayyad
+        </motion.h1>
+        <motion.p initial={{opacity:0,y:20}} animate={{opacity:1,y:0}} transition={{delay:0.3,duration:0.8}} className="text-xl text-cyan-200 max-w-xl">
+          BI Specialist · Data Analyst · Python Developer · Instructor
+        </motion.p>
+        <div className="flex gap-4 mt-8">
+          <Button variant="secondary" asChild><a href="#contact">Let’s Collaborate</a></Button>
+          <Button variant="outline" asChild><a href="/Amr-Ayyad-Resume.pdf" download>Download Resume</a></Button>
+        </div>
+      </section>
+
+      {/* About */}
+      <section id="about" className="py-28 px-4 max-w-5xl mx-auto text-center">
+        <h2 className="text-3xl font-bold mb-10">About Me</h2>
+        <p className="text-lg text-gray-200 leading-relaxed">
+          I’m a Business Intelligence Specialist and Data Science Instructor passionate about transforming data into actionable insights. I’ve trained hundreds of learners, built BI dashboards, developed curriculum, and created Python tools that automate workflows and enhance decision-making.
+        </p>
+      </section>
+
+      {/* Skills Highlights */}
+      <section id="skills" className="py-28 px-4 max-w-6xl mx-auto">
+        <h2 className="text-3xl font-bold text-center mb-14">What I Do</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {[
+            {title:"Training & Curriculum Design",desc:"Designing hands-on data analysis courses and mentoring learners."},
+            {title:"Business Intelligence Dashboards",desc:"Building clean, interactive dashboards using Power BI & SQL."},
+            {title:"Python Development",desc:"Automating tasks and analyzing data with Python and pandas."},
+            {title:"Data Storytelling",desc:"Turning raw data into clear, compelling insights for decision-makers."},
+          ].map((item,i)=>(
+            <Card key={i} className="rounded-2xl shadow-lg bg-gradient-to-br from-slate-800/50 to-cyan-800/30 border border-cyan-500/20">
+              <CardContent className="p-6 text-center">
+                <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
+                <p className="text-gray-300 text-sm">{item.desc}</p>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </section>
+
+      {/* Projects */}
+      <section id="projects" className="py-28 px-4 max-w-6xl mx-auto">
+        <h2 className="text-3xl font-bold text-center mb-14">Featured Projects</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {[
+            {name:"Interactive BI Dashboard",img:"/project1.png",link:"#"},
+            {name:"Python Data Automation Tool",img:"/project2.png",link:"#"},
+            {name:"Data Analysis Bootcamp",img:"/project3.png",link:"#"},
+            {name:"Learning Platform Analytics",img:"/project4.png",link:"#"},
+          ].map((proj,i)=>(
+            <motion.a key={i} href={proj.link} whileHover={{scale:1.03}} className="block rounded-2xl overflow-hidden shadow-xl bg-slate-900/60 border border-cyan-500/20">
+              <img src={proj.img} alt={proj.name} className="w-full h-48 object-cover" />
+              <div className="p-4">
+                <h3 className="text-lg font-semibold">{proj.name}</h3>
+              </div>
+            </motion.a>
+          ))}
+        </div>
+      </section>
+
+      {/* Contact */}
+      <section id="contact" className="py-28 px-4 max-w-4xl mx-auto text-center">
+        <h2 className="text-3xl font-bold mb-10">Get In Touch</h2>
+        <p className="text-gray-200 mb-6">Want to collaborate or learn more about my work? Let’s talk.</p>
+        <form className="max-w-md mx-auto flex flex-col gap-4">
+          <input placeholder="Your Name" className="p-3 rounded-xl bg-slate-800/50 border border-cyan-500/20"/>
+          <input placeholder="Your Email" className="p-3 rounded-xl bg-slate-800/50 border border-cyan-500/20"/>
+          <textarea placeholder="Your Message" className="p-3 rounded-xl bg-slate-800/50 border border-cyan-500/20" rows={4}></textarea>
+          <Button type="submit" className="w-full">Send Message</Button>
+        </form>
+        <div className="flex justify-center gap-6 mt-6">
+          <a href="mailto:amr.ayyad@example.com" className="hover:text-cyan-300"><Mail /></a>
+          <a href="https://github.com/amrayyad" className="hover:text-cyan-300"><Github /></a>
+          <a href="https://www.linkedin.com/in/amrayyad" className="hover:text-cyan-300"><Linkedin /></a>
+        </div>
+      </section>
+
+      <footer className="py-10 text-center text-gray-400 text-sm border-t border-cyan-500/10">
+        © {new Date().getFullYear()} Amr Ayyad — All rights reserved.
+      </footer>
+    </div>
+  );
+}
