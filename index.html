@@ -1,270 +1,182 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Amr Ayyad — BI Specialist & Data Analyst</title>
-  <meta name="description" content="Portfolio of Amr Ayyad — BI Specialist, Data Analyst, Training Specialist" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+
+  <!-- SEO & Social -->
+  <meta name="description" content="Amr Ayyad — BI Specialist & Data Analyst. I build dashboards, train teams, and turn complex data into decisions.">
+  <meta property="og:title" content="Amr Ayyad — BI Specialist & Data Analyst">
+  <meta property="og:description" content="BI Specialist building Power BI/Tableau solutions and training programs.">
+  <meta property="og:image" content="https://yourdomain.com/assets/og-image.png">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://amrayyad.github.io/">
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 <body>
+  <a href="#main" class="skip-link">Skip to content</a>
 
-  <!-- NAVBAR -->
-  <header class="top-nav">
-    <div class="site-wrap">
-      <a class="brand" href="#home">Amr Ayyad</a>
-
-      <nav class="nav-links" id="navLinks">
-        <a class="nav-link" href="#home">Home</a>
-        <a class="nav-link" href="#about">About</a>
-        <a class="nav-link" href="#certs">Certifications</a>
-        <a class="nav-link" href="#projects">Projects</a>
-        <a class="nav-link" href="#skills">Skills</a>
-        <a class="nav-link" href="#contact">Contact</a>
-      </nav>
-
-      <div class="nav-actions">
-        <a class="btn btn-outline" href="assets/resume.pdf" download>Download Resume</a>
-        <button id="mobileToggle" class="hamburger" aria-label="Open menu" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-    </div>
-
-    <!-- mobile nav -->
-    <div id="mobileMenu" class="mobile-menu" hidden>
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#certs">Certifications</a>
-      <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
-      <a href="#contact">Contact</a>
-    </div>
+  <header>
+    <nav class="side-nav glass-card" role="navigation" aria-label="Main navigation">
+      <ul class="nav-links">
+        <li><a href="#hero" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <main id="home">
-    <!-- HERO -->
-    <section class="hero section" id="home">
-      <div class="hero-bg" aria-hidden="true"></div>
-      <div class="site-wrap hero-inner">
-        <div class="hero-left">
-          <h1 class="hero-title">Hi, I’m <span>Amr Ayyad</span></h1>
-          <p class="hero-sub">BI Specialist · Data Analyst · Training Specialist — I turn complex data into clear decisions.</p>
-
-          <!-- stats cards -->
-          <div class="stats-row">
-            <div class="stat card">
-              <div class="stat-value">5+</div>
-              <div class="stat-label">Years Experience</div>
-            </div>
-            <div class="stat card">
-              <div class="stat-value">50+</div>
-              <div class="stat-label">Dashboards</div>
-            </div>
-            <div class="stat card">
-              <div class="stat-value">200+</div>
-              <div class="stat-label">Trainees</div>
-            </div>
-          </div>
-
-          <div class="hero-cta">
-            <a class="btn btn-primary" href="#projects">View Projects</a>
-            <a class="btn btn-ghost" href="mailto:amro.m.ayyad@gmail.com">Contact Me</a>
-          </div>
-        </div>
-
-        <div class="hero-right">
-          <img class="profile lazy" src="assets/pfp.jpg" alt="Amr Ayyad" loading="lazy">
-        </div>
+  <main id="main">
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+      <h1>Amr Ayyad — BI Specialist & Data Analyst</h1>
+      <p>I build dashboards, train teams, and turn complex data into decisions.</p>
+      <div class="cta-buttons">
+        <a href="Profile.pdf" download class="btn btn-primary">Download Resume</a>
+        <a href="Profile.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">View Resume</a>
       </div>
     </section>
 
-    <!-- ABOUT -->
-    <section id="about" class="section reveal">
-      <div class="site-wrap">
-        <h2 class="section-title">About</h2>
-        <div class="glass-card about-grid">
-          <div>
-            <p>I bridge the gap between complex data and clear understanding. I build interactive dashboards (Power BI, Tableau), write automation scripts in Python, design hands-on training curricula, and help teams adopt a data-driven culture.</p>
-            <p>I’ve designed training programs, built end-to-end reporting solutions, and mentored analysts across sectors. I focus on clarity, reliability, and business impact.</p>
-          </div>
-          <div class="about-quick">
-            <ul class="mini-list">
-              <li><strong>Domains:</strong> Finance, HR analytics, Sales & Ops</li>
-              <li><strong>Tools:</strong> Power BI, SQL, Python, Excel</li>
-              <li><strong>Teaching:</strong> Curriculum design, workshops, 1:1 mentoring</li>
-            </ul>
-          </div>
-        </div>
+    <!-- About -->
+    <section id="about" class="about glass-card">
+      <h2>About Me</h2>
+      <p>Data professional with expertise in BI, data analysis, and training. Skilled in Power BI, Tableau, Python, and SQL.</p>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="projects glass-card">
+      <h2>Featured Projects</h2>
+      <div class="project">
+        <img src="assets/project1.jpg" alt="Project 1 screenshot" loading="lazy">
+        <h3>HR Analytics Dashboard</h3>
+        <p>Interactive Power BI dashboard reducing reporting time by 50%.</p>
+        <a href="https://github.com/amrayyad/hr-dashboard" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+      </div>
+      <div class="project">
+        <img src="assets/project2.jpg" alt="Project 2 screenshot" loading="lazy">
+        <h3>Customer Retention Analysis</h3>
+        <p>Python + SQL analysis improving retention by 15%.</p>
+        <a href="https://github.com/amrayyad/customer-retention" target="_blank" rel="noopener noreferrer">View on GitHub</a>
       </div>
     </section>
 
-    <!-- CERTIFICATIONS -->
-    <section id="certs" class="section reveal">
-      <div class="site-wrap">
-        <h2 class="section-title">Certifications & Badges</h2>
-        <div class="certs-grid">
-          <!-- colored icons via simpleicons CDN (svg PNG) -->
-          <div class="cert-badge" title="Microsoft Power BI">
-            <img loading="lazy" src="https://cdn.simpleicons.org/microsoftpowerbi/FFB900" alt="Power BI">
-            <span>Power BI</span>
-          </div>
-
-          <div class="cert-badge" title="Python">
-            <img loading="lazy" src="https://cdn.simpleicons.org/python/3776AB" alt="Python">
-            <span>Python</span>
-          </div>
-
-          <div class="cert-badge" title="SQL">
-            <img loading="lazy" src="https://cdn.simpleicons.org/mysql/4479A1" alt="SQL">
-            <span>SQL / MySQL</span>
-          </div>
-
-          <div class="cert-badge" title="Excel">
-            <img loading="lazy" src="https://cdn.simpleicons.org/microsoftexcel/217346" alt="Excel">
-            <span>Advanced Excel</span>
-          </div>
-
-          <div class="cert-badge" title="Tableau">
-            <img loading="lazy" src="https://cdn.simpleicons.org/tableau/E97627" alt="Tableau">
-            <span>Tableau</span>
-          </div>
-
-          <div class="cert-badge" title="Instructional Design">
-            <img loading="lazy" src="https://cdn.simpleicons.org/canva/00C4CC" alt="Instructional Design">
-            <span>Instructional Design</span>
-          </div>
-        </div>
-      </div>
+    <!-- Testimonials -->
+    <section id="testimonials" class="testimonials glass-card">
+      <h2>Testimonials</h2>
+      <blockquote class="testimonial">
+        <p class="testimonial-text">Amr transformed our data culture with his dashboards and training.</p>
+        <cite>— Former Manager, XYZ Co.</cite>
+      </blockquote>
     </section>
 
-    <!-- PROJECTS -->
-    <section id="projects" class="section reveal">
-      <div class="site-wrap">
-        <h2 class="section-title">Projects</h2>
-
-        <div class="carousel-wrap">
-          <button class="carousel-btn prev" aria-label="Previous projects">&larr;</button>
-
-          <div class="carousel" id="projectsCarousel" tabindex="0">
-            <!-- project items (lazy images) -->
-            <article class="project-card">
-              <div class="project-thumb">
-                <img loading="lazy" src="assets/project1.png" alt="Sales Dashboard">
-              </div>
-              <h3>Sales Performance Dashboard</h3>
-              <p class="muted">Interactive Power BI dashboard tracking KPIs and trends across regions.</p>
-              <div class="tags"><span>Power BI</span><span>SQL</span><span>Dashboards</span></div>
-            </article>
-
-            <article class="project-card">
-              <div class="project-thumb">
-                <img loading="lazy" src="assets/project2.png" alt="Training Program">
-              </div>
-              <h3>Data Literacy Bootcamp</h3>
-              <p class="muted">12-week instructor-led program teaching Excel, SQL, and Power BI to analysts.</p>
-              <div class="tags"><span>Training</span><span>Curriculum</span><span>Python</span></div>
-            </article>
-
-            <article class="project-card">
-              <div class="project-thumb">
-                <img loading="lazy" src="assets/project3.png" alt="Risk Analysis">
-              </div>
-              <h3>Market Risk Framework</h3>
-              <p class="muted">Python-based monitoring + Tableau heuristics for near-real-time risk signals.</p>
-              <div class="tags"><span>Python</span><span>Tableau</span><span>Monitoring</span></div>
-            </article>
-
-            <article class="project-card">
-              <div class="project-thumb">
-                <img loading="lazy" src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=1200&q=60" alt="HR Analytics (placeholder)">
-              </div>
-              <h3>HR Analytics (Placeholder)</h3>
-              <p class="muted">Placeholder project — replace with your screenshot and link.</p>
-              <div class="tags"><span>Analytics</span><span>Excel</span></div>
-            </article>
-          </div>
-
-          <button class="carousel-btn next" aria-label="Next projects">&rarr;</button>
-        </div>
-      </div>
-    </section>
-
-    <!-- SKILLS -->
-    <section id="skills" class="section reveal">
-      <div class="site-wrap">
-        <h2 class="section-title">Skills</h2>
-        <div class="skills-grid">
-          <div class="skill-pill">Power BI</div>
-          <div class="skill-pill">DAX</div>
-          <div class="skill-pill">SQL</div>
-          <div class="skill-pill">Python</div>
-          <div class="skill-pill">Excel</div>
-          <div class="skill-pill">Data Modeling</div>
-          <div class="skill-pill">ETL / Airflow</div>
-          <div class="skill-pill">Visualization</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="section reveal">
-      <div class="site-wrap">
-        <h2 class="section-title">Contact</h2>
-
-        <div class="contact-grid">
-          <form id="contactForm" class="glass-card contact-form" action="https://formspree.io/f/placeholder" method="POST">
-            <!-- Replace action URL with your Formspree endpoint -->
-            <label>
-              <span class="label">Name</span>
-              <input required name="name" type="text" class="form-input">
-            </label>
-
-            <label>
-              <span class="label">Email</span>
-              <input required name="_replyto" type="email" class="form-input">
-            </label>
-
-            <label>
-              <span class="label">Message</span>
-              <textarea required name="message" class="form-input" rows="6"></textarea>
-            </label>
-
-            <div class="form-actions">
-              <button type="submit" class="btn btn-primary">Send Message</button>
-              <button type="button" id="formClear" class="btn btn-ghost">Clear</button>
-            </div>
-
-            <p id="formStatus" class="form-status" aria-live="polite"></p>
-          </form>
-
-          <aside class="contact-aside">
-            <p>Prefer email? <a href="mailto:amro.m.ayyad@gmail.com">amro.m.ayyad@gmail.com</a></p>
-
-            <div class="social-row">
-              <a class="social-link" href="https://www.linkedin.com/in/amr-m-ayyad" target="_blank" rel="noopener">LinkedIn</a>
-              <a class="social-link" href="https://github.com/amrayyad" target="_blank" rel="noopener">GitHub</a>
-              <a class="social-link" href="https://orcid.org/0009-0008-6301-377X" target="_blank" rel="noopener">ORCID</a>
-            </div>
-          </aside>
-        </div>
-      </div>
+    <!-- Contact -->
+    <section id="contact" class="contact glass-card">
+      <h2>Contact Me</h2>
+      <form id="contactForm" class="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn btn-primary">Send</button>
+      </form>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="site-wrap">
-      <div class="footer-row">
-        <div>© <span id="year"></span> Amr Ayyad</div>
-        <div class="footer-links">
-          <a href="https://scholar.google.com/citations?user=2vJSyI8AAAAJ" target="_blank" rel="noopener">Google Scholar</a>
-          <a href="https://www.researchgate.net/profile/Amr-Ayyad" target="_blank" rel="noopener">ResearchGate</a>
-        </div>
-      </div>
+  <footer class="glass-card">
+    <p>&copy; 2025 Amr Ayyad</p>
+    <div class="social-links">
+      <a href="https://linkedin.com/in/amrayyad" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://orcid.org/0000-0000-0000-0000" target="_blank" rel="noopener noreferrer">ORCID</a>
+      <a href="https://github.com/amrayyad" target="_blank" rel="noopener noreferrer">GitHub</a>
     </div>
   </footer>
 
-  <script src="script.js" defer></script>
+  <!-- Scripts -->
+  <script>
+  // IntersectionObserver nav highlight
+  document.addEventListener("DOMContentLoaded", () => {
+    const sections = document.querySelectorAll("main section[id]");
+    const navLinks = document.querySelectorAll(".nav-links a");
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        const id = entry.target.getAttribute("id");
+        const link = document.querySelector(`.nav-links a[href="#${id}"]`);
+        if (!link) return;
+        if (entry.isIntersecting) {
+          navLinks.forEach(l => {
+            l.classList.remove("active");
+            l.removeAttribute("aria-current");
+          });
+          link.classList.add("active");
+          link.setAttribute("aria-current", "true");
+        }
+      });
+    }, { rootMargin: "-20% 0px -50% 0px", threshold: 0.25 });
+    sections.forEach(section => observer.observe(section));
+  });
+
+  // Contact form via Formspree
+  document.getElementById("contactForm").addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const data = new FormData(form);
+    try {
+      const res = await fetch("https://formspree.io/f/YOUR_FORM_ID", {
+        method: "POST",
+        body: data,
+        headers: { "Accept": "application/json" }
+      });
+      if (res.ok) {
+        alert("Thanks — I will get back to you soon.");
+        form.reset();
+      } else {
+        alert("Submission failed — please email me directly.");
+      }
+    } catch (err) {
+      console.error(err);
+      alert("Error — check console.");
+    }
+  });
+  </script>
+
+  <!-- Accessibility: reduced motion -->
+  <style>
+  @media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; transition: none !important; }
+    #particles-js { display: none !important; }
+  }
+  .skip-link {
+    position: absolute;
+    left: -999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+  .skip-link:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    padding: 0.5rem;
+    background: #000;
+    color: #fff;
+    z-index: 1000;
+  }
+  .testimonial-text::before {
+    content: "“";
+    font-size: 4rem;
+    color: var(--cyan, #00ffff);
+    opacity: 0.12;
+    position: absolute;
+    left: -15px;
+    top: -20px;
+    font-family: Georgia, serif;
+  }
+  </style>
 </body>
 </html>
