@@ -2,7 +2,7 @@ let parser = new DOMParser();
 let originalDoc;
 
 async function loadIndex() {
-  const res = await fetch('index.html');
+  const res = await fetch('main/index.html');
   const html = await res.text();
   originalDoc = parser.parseFromString(html, 'text/html');
   loadSkills();
